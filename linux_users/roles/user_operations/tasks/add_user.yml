@@ -1,0 +1,12 @@
+---
+
+name: Add user to the system
+user:
+  name: {{ user_name }}
+  generare_ssh_keys: yes
+  password: 'DUMMY_password'
+  shell: /bin/bash
+  system: no 
+  groups: {{ perm_group }}
+  append: yes 
+command: chage -d 0 {{ user_name }}
