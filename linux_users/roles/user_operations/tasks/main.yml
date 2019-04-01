@@ -1,12 +1,12 @@
 ---
 name: Add users to the system
-include: addusers.yml
+include: add_users.yml
 when: action == "add_user"
 
 name: Delete users from the system
-include: delusers.yml
+include: del_users.yml
 when: action == "del_user"
 
 name: Disable users from the system
-include: mod_users.yml
+include: disable_users.yml
 when: action == "disable_user"
