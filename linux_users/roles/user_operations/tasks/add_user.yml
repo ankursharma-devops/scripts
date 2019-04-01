@@ -2,11 +2,11 @@
 
 name: Add user to the system
 user:
-  name: {{ user_name }}
+  name: {{ user_name_role }}
   generare_ssh_keys: yes
   password: 'DUMMY_password'
   shell: /bin/bash
   system: no 
-  groups: {{ perm_group }}
+  groups: {{ grp_perm_role }}
   append: yes 
-command: chage -d 0 {{ user_name }}
+command: chage -d 0 {{ user_name_role }}
