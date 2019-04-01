@@ -1,6 +1,7 @@
 ---
-tasks:
+
 - name: Remove a user from the system
-    name: {{ user_name_role }}
+  user:
+    name: "{{ user_name_role }}"
     state: absent
     remove: yes

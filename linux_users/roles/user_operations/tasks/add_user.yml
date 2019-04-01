@@ -1,12 +1,13 @@
 ---
-tasks:
+
 - name: Add user to the system
   user:
-    name: {{ user_name_role }}
-    generare_ssh_keys: yes
-    password: 'DUMMY_password'
+    name: "{{ user_name_role }}"
+    password: '$6$o4TyCUs/gLcXj5$a3.QPk/cpzc.BfRhM9hjH5561Cn3I54EEfeExujFOvT1BPj2V0Y3e7S0iu4YSv6jwAPzJji4YnK9WlBJRfjcR1' #"DUMMY_password"
     shell: /bin/bash
     system: no 
-    groups: {{ grp_perm_role }}
+    groups: "{{ grp_perm_role }}"
     append: yes 
-  command: chage -d 0 {{ user_name_role }}
+  
+- name: Force user to change password on first login
+  command: chage -d 0 "{{ user_name_role }}"
