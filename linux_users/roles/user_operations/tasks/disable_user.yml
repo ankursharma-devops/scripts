@@ -1,0 +1,3 @@
+---
+name: Disable shell access of a user
+command: usermod --shell /bin/false {{ user_name }}
