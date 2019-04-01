@@ -1,12 +1,12 @@
 ---
 name: Add users to the system
 include: add_users.yml
-when: action_is == "add_user"
+when: action_role == "add_user"
 
 name: Delete users from the system
 include: del_users.yml
-when: action_is == "del_user"
+when: action_role == "del_user"
 
 name: Disable users from the system
 include: disable_users.yml
-when: action_is == "disable_user"
+when: action_role == "disable_user"
