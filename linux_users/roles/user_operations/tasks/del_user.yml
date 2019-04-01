@@ -1,0 +1,6 @@
+---
+
+user: Remove a user from the system
+  name: {{ user_name }}
+  state: absent
+  remove: yes
