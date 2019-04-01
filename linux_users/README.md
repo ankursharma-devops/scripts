@@ -5,3 +5,4 @@ Usage:
 
 ansible-playbook main.yml --extra-vars " target_hosts=HOST_TAG user_name=NAME_OF_USER_TO_CREATE action=del_user/add_user/disable_user perm_group=GROUP_NAME/NA" -u ansible -k
 
+Note: Omit the -k option if ssh passwordless connection is set for the ansible user.
