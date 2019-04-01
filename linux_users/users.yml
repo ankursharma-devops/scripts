@@ -1,0 +1,13 @@
+---
+hosts: {{ target_server }}
+vars:
+  - user_name: {{ user_name }}
+  - grp_perm: {{ groups_name }}
+  - action:  {{ user_action }}
+roles:
+  - role: user_operations
+    vars: 
+      user_name: {{ user_name }}
+      grp_perm: {{ groups_name }}
+      action:  {{ user_action }}
+      
